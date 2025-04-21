@@ -1,8 +1,80 @@
 import pygame
 import math
-import scipy.io
-import numpy as np
 import random
+import numpy as np
+from scipy.io import savemat
+from datetime import datetime
+import time
+from pyOpenBCI import OpenBCICyton
+import threading
+import queue
+import serial.tools.list_ports
+
+# List available serial ports
+print("Available serial ports:")
+ports = list(serial.tools.list_ports.comports())
+for port in ports:
+    print(f"- {port.device}: {port.description}")
+
+if not ports:
+    print("No serial ports found. Please make sure your OpenBCI board is connected.")
+    exit(1)
+
+# Try to find the OpenBCI port
+openbci_port = None
+for port in ports:
+    if "OpenBCI" in port.description or "USB" in port.description:
+        openbci_port = port.device
+        break
+
+if openbci_port is None:
+    print("Could not automatically detect OpenBCI port. Please select from the list above and modify the port in the code.")
+    exit(1)
+
+print(f"Using port: {openbci_port}")
+
+# OpenBCI setup
+NUM_CHANNELS = 8  # Adjust based on your Cyton board configuration
+SAMPLE_RATE = 250  # Hz
+
+emg_data_queue = queue.Queue()
+recording_active = False
+current_trial_data = []
+trial_timestamps = []
+trial_labels = []
+metadata = {
+    'date': datetime.now().strftime('%Y-%m-%d'),
+    'time': datetime.now().strftime('%H:%M:%S'),
+    'sample_rate': SAMPLE_RATE,
+    'num_channels': NUM_CHANNELS,
+    'task': 'radial8'
+}
+
+def emg_callback(sample):
+    if recording_active:
+        emg_data_queue.put(sample.channels_data)
+
+def start_recording():
+    global recording_active
+    recording_active = True
+
+def stop_recording():
+    global recording_active
+    recording_active = False
+
+# Initialize OpenBCI board
+try:
+    board = OpenBCICyton(port=openbci_port, daisy=False)
+    board_thread = threading.Thread(target=board.start_stream, args=(emg_callback,))
+    board_thread.daemon = True
+    board_thread.start()
+except Exception as e:
+    print(f"Error initializing OpenBCI board: {e}")
+    print("Please make sure:")
+    print("1. The OpenBCI board is properly connected")
+    print("2. The correct port is selected")
+    print("3. No other program is using the board")
+    exit(1)
 
 # Initialize Pygame
 pygame.init()
@@ -37,6 +109,12 @@ running = True
 while running:
     current_time = pygame.time.get_ticks()
 
+    # Process EMG data queue
+    while not emg_data_queue.empty():
+        sample = emg_data_queue.get()
+        if target_active:  # Only record during target presentation
+            current_trial_data.append(sample)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -57,6 +135,15 @@ while running:
                     target_active = False
                     target_idx = None
                     next_target_time = current_time + random.randint(500, 3000)
+                    
+                    # Save trial data
+                    if current_trial_data:
+                        trial_timestamps.append({
+                            'start': current_time - len(current_trial_data) * (1000/SAMPLE_RATE),
+                            'end': current_time
+                        })
+                        trial_labels.append(target_idx)
+                        current_trial_data = []
 
             # Only check center button click if it's visible
             if show_center:
@@ -72,6 +159,7 @@ while running:
         target_idx = random.randint(0, 7)
         target_active = True
         show_center = False
+        start_recording()  # Start recording when target appears
 
     mouse_pos = pygame.mouse.get_pos()
     
@@ -99,18 +187,22 @@ while running:
     pygame.display.flip()
     clock.tick(60)
 
+# Clean up and save data
 pygame.quit()
+stop_recording()
 
-# Start neural recording, synchronize time stamps from gui and neural recording
+# Prepare data for saving
+neural_data = np.array(current_trial_data)
+mat_data = {
+    'neural_data': neural_data,
+    'cue': np.array(trial_labels),
+    'trial_timestamps': np.array(trial_timestamps),
+    'metadata': metadata
+}
 
-# Event loop
-  # Go cue, record time_stamp to mat 
-  # record end trial time stamp
-  # Save neural data snippet, and cue info
-  # Synchronize clocks
-
-# Save neural data to mat + save logs
-file_name = 'neural_data.mat'
-# scipy.io.savemat(file_name, neural_data) # neural_data not defined yet 
+# Save to .mat file
+file_name = f'neural_data_{datetime.now().strftime("%Y%m%d_%H%M%S")}.mat'
+savemat(file_name, mat_data)
+print(f"Data saved to {file_name}")
 
 # Plot PSTHs
