@@ -41,6 +41,8 @@ SAMPLE_RATE = 250  # Hz
 # Get number of trials from user
 try:
     NUM_TRIALS = int(input("Enter number of trials to collect: "))
+    PARTICIPANT_ID = input("Enter participant ID: ")
+    BLOCK_ID = input("Enter block ID: ")
 except ValueError:
     print("Please enter a valid number")
     exit(1)
@@ -58,7 +60,9 @@ metadata = {
     'sample_rate': SAMPLE_RATE,
     'num_channels': NUM_CHANNELS,
     'task': 'radial8',
-    'num_trials': NUM_TRIALS
+    'num_trials': NUM_TRIALS,
+    'participant_id': PARTICIPANT_ID,
+    'block_id': BLOCK_ID
 }
 
 # Cursor lock flag
