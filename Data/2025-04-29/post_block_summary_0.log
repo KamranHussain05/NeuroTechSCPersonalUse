@@ -1,0 +1,435 @@
+2025-04-29 14:53:40,556 - INFO - Starting radial8 task...
+2025-04-29 14:53:40,556 - INFO - Available serial ports:
+2025-04-29 14:53:40,564 - INFO - - /dev/ttyS0: ttyS0
+2025-04-29 14:53:40,564 - INFO - - /dev/ttyUSB0: FT231X USB UART - FT231X USB UART
+2025-04-29 14:53:40,564 - INFO - Using port: /dev/ttyUSB0
+2025-04-29 14:53:40,564 - INFO - Metadata: {'date': '2025-04-29', 'time': '14:53:40', 'sample_rate': 250, 'num_channels': 8, 'task': 'radial8', 'num_trials': 80, 'participant_id': 'kamran', 'block_id': 0, 'intended_save_path': '/home/braingeneers/Documents/NeuroTechSCPersonalUse/Data/2025-04-29'}
+2025-04-29 14:53:40,564 - INFO - Initializing OpenBCI board...
+2025-04-29 14:53:48,571 - INFO - OpenBCI board initialized successfully
+2025-04-29 14:53:51,714 - INFO - Started recording EMG data
+2025-04-29 14:53:51,714 - INFO - Starting trial 1
+2025-04-29 14:53:53,050 - INFO - Target 6 clicked! Trial 1/80
+2025-04-29 14:53:53,051 - INFO - Stopped recording EMG data
+2025-04-29 14:53:53,051 - INFO - Saved trial 0 with 331 samples
+2025-04-29 14:53:53,985 - INFO - Started recording EMG data
+2025-04-29 14:53:53,985 - INFO - Starting trial 2
+2025-04-29 14:53:55,064 - INFO - Target 2 clicked! Trial 2/80
+2025-04-29 14:53:55,064 - INFO - Stopped recording EMG data
+2025-04-29 14:53:55,064 - INFO - Saved trial 1 with 271 samples
+2025-04-29 14:53:57,379 - INFO - Started recording EMG data
+2025-04-29 14:53:57,380 - INFO - Starting trial 3
+2025-04-29 14:53:58,771 - INFO - Target 5 clicked! Trial 3/80
+2025-04-29 14:53:58,771 - INFO - Stopped recording EMG data
+2025-04-29 14:53:58,771 - INFO - Saved trial 2 with 349 samples
+2025-04-29 14:54:00,551 - INFO - Started recording EMG data
+2025-04-29 14:54:00,551 - INFO - Starting trial 4
+2025-04-29 14:54:01,899 - WARNING - Missed target 1 at trial 4
+2025-04-29 14:54:02,221 - WARNING - Missed target 1 at trial 4
+2025-04-29 14:54:02,735 - INFO - Target 1 clicked! Trial 4/80
+2025-04-29 14:54:02,736 - INFO - Stopped recording EMG data
+2025-04-29 14:54:02,737 - INFO - Saved trial 3 with 556 samples
+2025-04-29 14:54:05,016 - INFO - Started recording EMG data
+2025-04-29 14:54:05,016 - INFO - Starting trial 5
+2025-04-29 14:54:06,549 - INFO - Target 0 clicked! Trial 5/80
+2025-04-29 14:54:06,549 - INFO - Stopped recording EMG data
+2025-04-29 14:54:06,549 - INFO - Saved trial 4 with 376 samples
+2025-04-29 14:54:08,541 - INFO - Started recording EMG data
+2025-04-29 14:54:08,541 - INFO - Starting trial 6
+2025-04-29 14:54:09,957 - INFO - Target 1 clicked! Trial 6/80
+2025-04-29 14:54:09,957 - INFO - Stopped recording EMG data
+2025-04-29 14:54:09,957 - INFO - Saved trial 5 with 346 samples
+2025-04-29 14:54:11,053 - INFO - Started recording EMG data
+2025-04-29 14:54:11,053 - INFO - Starting trial 7
+2025-04-29 14:54:12,772 - INFO - Target 1 clicked! Trial 7/80
+2025-04-29 14:54:12,772 - INFO - Stopped recording EMG data
+2025-04-29 14:54:12,772 - INFO - Saved trial 6 with 436 samples
+2025-04-29 14:54:13,415 - INFO - Started recording EMG data
+2025-04-29 14:54:13,415 - INFO - Starting trial 8
+2025-04-29 14:54:14,478 - INFO - Target 6 clicked! Trial 8/80
+2025-04-29 14:54:14,478 - INFO - Stopped recording EMG data
+2025-04-29 14:54:14,478 - INFO - Saved trial 7 with 271 samples
+2025-04-29 14:54:16,420 - INFO - Started recording EMG data
+2025-04-29 14:54:16,420 - INFO - Starting trial 9
+2025-04-29 14:54:17,479 - WARNING - Missed target 3 at trial 9
+2025-04-29 14:54:17,865 - INFO - Target 3 clicked! Trial 9/80
+2025-04-29 14:54:17,866 - INFO - Stopped recording EMG data
+2025-04-29 14:54:17,866 - INFO - Saved trial 8 with 361 samples
+2025-04-29 14:54:19,645 - INFO - Started recording EMG data
+2025-04-29 14:54:19,645 - INFO - Starting trial 10
+2025-04-29 14:54:20,757 - INFO - Target 2 clicked! Trial 10/80
+2025-04-29 14:54:20,757 - INFO - Stopped recording EMG data
+2025-04-29 14:54:20,757 - INFO - Saved trial 9 with 271 samples
+2025-04-29 14:54:21,335 - INFO - Started recording EMG data
+2025-04-29 14:54:21,335 - INFO - Starting trial 11
+2025-04-29 14:54:22,268 - INFO - Target 5 clicked! Trial 11/80
+2025-04-29 14:54:22,268 - INFO - Stopped recording EMG data
+2025-04-29 14:54:22,268 - INFO - Saved trial 10 with 226 samples
+2025-04-29 14:54:24,898 - INFO - Started recording EMG data
+2025-04-29 14:54:24,898 - INFO - Starting trial 12
+2025-04-29 14:54:26,215 - INFO - Target 1 clicked! Trial 12/80
+2025-04-29 14:54:26,215 - INFO - Stopped recording EMG data
+2025-04-29 14:54:26,215 - INFO - Saved trial 11 with 331 samples
+2025-04-29 14:54:26,809 - INFO - Started recording EMG data
+2025-04-29 14:54:26,809 - INFO - Starting trial 13
+2025-04-29 14:54:27,921 - INFO - Target 1 clicked! Trial 13/80
+2025-04-29 14:54:27,921 - INFO - Stopped recording EMG data
+2025-04-29 14:54:27,921 - INFO - Saved trial 12 with 286 samples
+2025-04-29 14:54:28,793 - INFO - Started recording EMG data
+2025-04-29 14:54:28,793 - INFO - Starting trial 14
+2025-04-29 14:54:29,917 - INFO - Target 4 clicked! Trial 14/80
+2025-04-29 14:54:29,918 - INFO - Stopped recording EMG data
+2025-04-29 14:54:29,918 - INFO - Saved trial 13 with 286 samples
+2025-04-29 14:54:32,100 - INFO - Started recording EMG data
+2025-04-29 14:54:32,100 - INFO - Starting trial 15
+2025-04-29 14:54:33,094 - INFO - Target 7 clicked! Trial 15/80
+2025-04-29 14:54:33,094 - INFO - Stopped recording EMG data
+2025-04-29 14:54:33,094 - INFO - Saved trial 14 with 255 samples
+2025-04-29 14:54:35,830 - INFO - Started recording EMG data
+2025-04-29 14:54:35,830 - INFO - Starting trial 16
+2025-04-29 14:54:36,842 - INFO - Target 0 clicked! Trial 16/80
+2025-04-29 14:54:36,842 - INFO - Stopped recording EMG data
+2025-04-29 14:54:36,842 - INFO - Saved trial 15 with 240 samples
+2025-04-29 14:54:37,611 - INFO - Started recording EMG data
+2025-04-29 14:54:37,612 - INFO - Starting trial 17
+2025-04-29 14:54:38,944 - INFO - Target 0 clicked! Trial 17/80
+2025-04-29 14:54:38,945 - INFO - Stopped recording EMG data
+2025-04-29 14:54:38,945 - INFO - Saved trial 16 with 331 samples
+2025-04-29 14:54:41,710 - INFO - Started recording EMG data
+2025-04-29 14:54:41,711 - INFO - Starting trial 18
+2025-04-29 14:54:42,934 - WARNING - Missed target 3 at trial 18
+2025-04-29 14:54:43,402 - INFO - Target 3 clicked! Trial 18/80
+2025-04-29 14:54:43,402 - INFO - Stopped recording EMG data
+2025-04-29 14:54:43,402 - INFO - Saved trial 17 with 420 samples
+2025-04-29 14:54:45,215 - INFO - Started recording EMG data
+2025-04-29 14:54:45,215 - INFO - Starting trial 19
+2025-04-29 14:54:46,499 - INFO - Target 4 clicked! Trial 19/80
+2025-04-29 14:54:46,499 - INFO - Stopped recording EMG data
+2025-04-29 14:54:46,499 - INFO - Saved trial 18 with 316 samples
+2025-04-29 14:54:48,625 - INFO - Started recording EMG data
+2025-04-29 14:54:48,625 - INFO - Starting trial 20
+2025-04-29 14:54:49,447 - INFO - Target 7 clicked! Trial 20/80
+2025-04-29 14:54:49,447 - INFO - Stopped recording EMG data
+2025-04-29 14:54:49,447 - INFO - Saved trial 19 with 210 samples
+2025-04-29 14:54:51,559 - INFO - Started recording EMG data
+2025-04-29 14:54:51,560 - INFO - Starting trial 21
+2025-04-29 14:54:52,909 - INFO - Target 5 clicked! Trial 21/80
+2025-04-29 14:54:52,910 - INFO - Stopped recording EMG data
+2025-04-29 14:54:52,910 - INFO - Saved trial 20 with 330 samples
+2025-04-29 14:54:55,407 - INFO - Started recording EMG data
+2025-04-29 14:54:55,407 - INFO - Starting trial 22
+2025-04-29 14:54:56,531 - INFO - Target 7 clicked! Trial 22/80
+2025-04-29 14:54:56,531 - INFO - Stopped recording EMG data
+2025-04-29 14:54:56,531 - INFO - Saved trial 21 with 286 samples
+2025-04-29 14:54:59,330 - INFO - Started recording EMG data
+2025-04-29 14:54:59,330 - INFO - Starting trial 23
+2025-04-29 14:55:00,294 - INFO - Target 4 clicked! Trial 23/80
+2025-04-29 14:55:00,294 - INFO - Stopped recording EMG data
+2025-04-29 14:55:00,295 - INFO - Saved trial 22 with 240 samples
+2025-04-29 14:55:01,322 - INFO - Started recording EMG data
+2025-04-29 14:55:01,322 - INFO - Starting trial 24
+2025-04-29 14:55:02,530 - INFO - Target 7 clicked! Trial 24/80
+2025-04-29 14:55:02,531 - INFO - Stopped recording EMG data
+2025-04-29 14:55:02,531 - INFO - Saved trial 23 with 316 samples
+2025-04-29 14:55:05,000 - INFO - Started recording EMG data
+2025-04-29 14:55:05,000 - INFO - Starting trial 25
+2025-04-29 14:55:06,094 - INFO - Target 3 clicked! Trial 25/80
+2025-04-29 14:55:06,095 - INFO - Stopped recording EMG data
+2025-04-29 14:55:06,095 - INFO - Saved trial 24 with 270 samples
+2025-04-29 14:55:07,876 - INFO - Started recording EMG data
+2025-04-29 14:55:07,876 - INFO - Starting trial 26
+2025-04-29 14:55:08,759 - INFO - Target 7 clicked! Trial 26/80
+2025-04-29 14:55:08,759 - INFO - Stopped recording EMG data
+2025-04-29 14:55:08,759 - INFO - Saved trial 25 with 211 samples
+2025-04-29 14:55:10,156 - INFO - Started recording EMG data
+2025-04-29 14:55:10,156 - INFO - Starting trial 27
+2025-04-29 14:55:11,248 - INFO - Target 3 clicked! Trial 27/80
+2025-04-29 14:55:11,249 - INFO - Stopped recording EMG data
+2025-04-29 14:55:11,249 - INFO - Saved trial 26 with 271 samples
+2025-04-29 14:55:11,973 - INFO - Started recording EMG data
+2025-04-29 14:55:11,973 - INFO - Starting trial 28
+2025-04-29 14:55:13,067 - WARNING - Missed target 4 at trial 28
+2025-04-29 14:55:13,372 - INFO - Target 4 clicked! Trial 28/80
+2025-04-29 14:55:13,372 - INFO - Stopped recording EMG data
+2025-04-29 14:55:13,373 - INFO - Saved trial 27 with 346 samples
+2025-04-29 14:55:15,106 - INFO - Started recording EMG data
+2025-04-29 14:55:15,107 - INFO - Starting trial 29
+2025-04-29 14:55:16,036 - INFO - Target 4 clicked! Trial 29/80
+2025-04-29 14:55:16,036 - INFO - Stopped recording EMG data
+2025-04-29 14:55:16,036 - INFO - Saved trial 28 with 240 samples
+2025-04-29 14:55:16,664 - INFO - Started recording EMG data
+2025-04-29 14:55:16,664 - INFO - Starting trial 30
+2025-04-29 14:55:17,772 - INFO - Target 4 clicked! Trial 30/80
+2025-04-29 14:55:17,772 - INFO - Stopped recording EMG data
+2025-04-29 14:55:17,772 - INFO - Saved trial 29 with 285 samples
+2025-04-29 14:55:19,594 - INFO - Started recording EMG data
+2025-04-29 14:55:19,594 - INFO - Starting trial 31
+2025-04-29 14:55:20,641 - INFO - Target 3 clicked! Trial 31/80
+2025-04-29 14:55:20,641 - INFO - Stopped recording EMG data
+2025-04-29 14:55:20,641 - INFO - Saved trial 30 with 271 samples
+2025-04-29 14:55:22,557 - INFO - Started recording EMG data
+2025-04-29 14:55:22,557 - INFO - Starting trial 32
+2025-04-29 14:55:23,762 - INFO - Target 6 clicked! Trial 32/80
+2025-04-29 14:55:23,762 - INFO - Stopped recording EMG data
+2025-04-29 14:55:23,762 - INFO - Saved trial 31 with 311 samples
+2025-04-29 14:55:26,511 - INFO - Started recording EMG data
+2025-04-29 14:55:26,511 - INFO - Starting trial 33
+2025-04-29 14:55:27,894 - INFO - Target 5 clicked! Trial 33/80
+2025-04-29 14:55:27,894 - INFO - Stopped recording EMG data
+2025-04-29 14:55:27,894 - INFO - Saved trial 32 with 345 samples
+2025-04-29 14:55:28,924 - INFO - Started recording EMG data
+2025-04-29 14:55:28,924 - INFO - Starting trial 34
+2025-04-29 14:55:30,784 - INFO - Target 6 clicked! Trial 34/80
+2025-04-29 14:55:30,784 - INFO - Stopped recording EMG data
+2025-04-29 14:55:30,784 - INFO - Saved trial 33 with 466 samples
+2025-04-29 14:55:32,732 - INFO - Started recording EMG data
+2025-04-29 14:55:32,733 - INFO - Starting trial 35
+2025-04-29 14:55:33,795 - INFO - Target 1 clicked! Trial 35/80
+2025-04-29 14:55:33,796 - INFO - Stopped recording EMG data
+2025-04-29 14:55:33,796 - INFO - Saved trial 34 with 270 samples
+2025-04-29 14:55:34,824 - INFO - Started recording EMG data
+2025-04-29 14:55:34,824 - INFO - Starting trial 36
+2025-04-29 14:55:35,869 - INFO - Target 2 clicked! Trial 36/80
+2025-04-29 14:55:35,869 - INFO - Stopped recording EMG data
+2025-04-29 14:55:35,869 - INFO - Saved trial 35 with 255 samples
+2025-04-29 14:55:37,434 - INFO - Started recording EMG data
+2025-04-29 14:55:37,434 - INFO - Starting trial 37
+2025-04-29 14:55:38,510 - INFO - Target 2 clicked! Trial 37/80
+2025-04-29 14:55:38,510 - INFO - Stopped recording EMG data
+2025-04-29 14:55:38,510 - INFO - Saved trial 36 with 256 samples
+2025-04-29 14:55:40,100 - INFO - Started recording EMG data
+2025-04-29 14:55:40,100 - INFO - Starting trial 38
+2025-04-29 14:55:41,013 - WARNING - Missed target 6 at trial 38
+2025-04-29 14:55:41,285 - INFO - Target 6 clicked! Trial 38/80
+2025-04-29 14:55:41,285 - INFO - Stopped recording EMG data
+2025-04-29 14:55:41,285 - INFO - Saved trial 37 with 300 samples
+2025-04-29 14:55:44,161 - INFO - Started recording EMG data
+2025-04-29 14:55:44,161 - INFO - Starting trial 39
+2025-04-29 14:55:45,108 - INFO - Target 6 clicked! Trial 39/80
+2025-04-29 14:55:45,108 - INFO - Stopped recording EMG data
+2025-04-29 14:55:45,109 - INFO - Saved trial 38 with 225 samples
+2025-04-29 14:55:47,202 - INFO - Started recording EMG data
+2025-04-29 14:55:47,202 - INFO - Starting trial 40
+2025-04-29 14:55:48,601 - WARNING - Missed target 7 at trial 40
+2025-04-29 14:55:49,245 - INFO - Target 7 clicked! Trial 40/80
+2025-04-29 14:55:49,245 - INFO - Stopped recording EMG data
+2025-04-29 14:55:49,245 - INFO - Saved trial 39 with 511 samples
+2025-04-29 14:55:51,254 - INFO - Started recording EMG data
+2025-04-29 14:55:51,254 - INFO - Starting trial 41
+2025-04-29 14:55:52,879 - INFO - Target 6 clicked! Trial 41/80
+2025-04-29 14:55:52,880 - INFO - Stopped recording EMG data
+2025-04-29 14:55:52,880 - INFO - Saved trial 40 with 406 samples
+2025-04-29 14:55:55,187 - INFO - Started recording EMG data
+2025-04-29 14:55:55,187 - INFO - Starting trial 42
+2025-04-29 14:55:56,214 - INFO - Target 1 clicked! Trial 42/80
+2025-04-29 14:55:56,214 - INFO - Stopped recording EMG data
+2025-04-29 14:55:56,215 - INFO - Saved trial 41 with 256 samples
+2025-04-29 14:55:58,524 - INFO - Started recording EMG data
+2025-04-29 14:55:58,524 - INFO - Starting trial 43
+2025-04-29 14:55:59,858 - INFO - Target 5 clicked! Trial 43/80
+2025-04-29 14:55:59,860 - INFO - Stopped recording EMG data
+2025-04-29 14:55:59,860 - INFO - Saved trial 42 with 330 samples
+2025-04-29 14:56:02,765 - INFO - Started recording EMG data
+2025-04-29 14:56:02,765 - INFO - Starting trial 44
+2025-04-29 14:56:03,871 - INFO - Target 7 clicked! Trial 44/80
+2025-04-29 14:56:03,871 - INFO - Stopped recording EMG data
+2025-04-29 14:56:03,871 - INFO - Saved trial 43 with 271 samples
+2025-04-29 14:56:05,222 - INFO - Started recording EMG data
+2025-04-29 14:56:05,222 - INFO - Starting trial 45
+2025-04-29 14:56:06,379 - WARNING - Missed target 7 at trial 45
+2025-04-29 14:56:07,022 - WARNING - Missed target 7 at trial 45
+2025-04-29 14:56:07,634 - INFO - Target 7 clicked! Trial 45/80
+2025-04-29 14:56:07,634 - INFO - Stopped recording EMG data
+2025-04-29 14:56:07,634 - INFO - Saved trial 44 with 601 samples
+2025-04-29 14:56:09,643 - INFO - Started recording EMG data
+2025-04-29 14:56:09,644 - INFO - Starting trial 46
+2025-04-29 14:56:10,638 - INFO - Target 6 clicked! Trial 46/80
+2025-04-29 14:56:10,639 - INFO - Stopped recording EMG data
+2025-04-29 14:56:10,639 - INFO - Saved trial 45 with 241 samples
+2025-04-29 14:56:13,610 - INFO - Started recording EMG data
+2025-04-29 14:56:13,611 - INFO - Starting trial 47
+2025-04-29 14:56:14,683 - INFO - Target 3 clicked! Trial 47/80
+2025-04-29 14:56:14,684 - INFO - Stopped recording EMG data
+2025-04-29 14:56:14,684 - INFO - Saved trial 46 with 271 samples
+2025-04-29 14:56:17,307 - INFO - Started recording EMG data
+2025-04-29 14:56:17,307 - INFO - Starting trial 48
+2025-04-29 14:56:18,546 - INFO - Target 3 clicked! Trial 48/80
+2025-04-29 14:56:18,547 - INFO - Stopped recording EMG data
+2025-04-29 14:56:18,547 - INFO - Saved trial 47 with 316 samples
+2025-04-29 14:56:19,384 - INFO - Started recording EMG data
+2025-04-29 14:56:19,385 - INFO - Starting trial 49
+2025-04-29 14:56:20,607 - INFO - Target 1 clicked! Trial 49/80
+2025-04-29 14:56:20,607 - INFO - Stopped recording EMG data
+2025-04-29 14:56:20,607 - INFO - Saved trial 48 with 301 samples
+2025-04-29 14:56:22,007 - INFO - Started recording EMG data
+2025-04-29 14:56:22,007 - INFO - Starting trial 50
+2025-04-29 14:56:23,003 - INFO - Target 6 clicked! Trial 50/80
+2025-04-29 14:56:23,004 - INFO - Stopped recording EMG data
+2025-04-29 14:56:23,004 - INFO - Saved trial 49 with 240 samples
+2025-04-29 14:56:23,630 - INFO - Started recording EMG data
+2025-04-29 14:56:23,630 - INFO - Starting trial 51
+2025-04-29 14:56:24,674 - INFO - Target 7 clicked! Trial 51/80
+2025-04-29 14:56:24,674 - INFO - Stopped recording EMG data
+2025-04-29 14:56:24,675 - INFO - Saved trial 50 with 255 samples
+2025-04-29 14:56:25,284 - INFO - Started recording EMG data
+2025-04-29 14:56:25,284 - INFO - Starting trial 52
+2025-04-29 14:56:26,250 - INFO - Target 1 clicked! Trial 52/80
+2025-04-29 14:56:26,250 - INFO - Stopped recording EMG data
+2025-04-29 14:56:26,250 - INFO - Saved trial 51 with 241 samples
+2025-04-29 14:56:27,553 - INFO - Started recording EMG data
+2025-04-29 14:56:27,553 - INFO - Starting trial 53
+2025-04-29 14:56:28,551 - INFO - Target 1 clicked! Trial 53/80
+2025-04-29 14:56:28,553 - INFO - Stopped recording EMG data
+2025-04-29 14:56:28,553 - INFO - Saved trial 52 with 256 samples
+2025-04-29 14:56:29,066 - INFO - Started recording EMG data
+2025-04-29 14:56:29,066 - INFO - Starting trial 54
+2025-04-29 14:56:30,353 - INFO - Target 1 clicked! Trial 54/80
+2025-04-29 14:56:30,354 - INFO - Stopped recording EMG data
+2025-04-29 14:56:30,354 - INFO - Saved trial 53 with 331 samples
+2025-04-29 14:56:32,809 - INFO - Started recording EMG data
+2025-04-29 14:56:32,809 - INFO - Starting trial 55
+2025-04-29 14:56:33,933 - INFO - Target 4 clicked! Trial 55/80
+2025-04-29 14:56:33,933 - INFO - Stopped recording EMG data
+2025-04-29 14:56:33,933 - INFO - Saved trial 54 with 286 samples
+2025-04-29 14:56:35,511 - INFO - Started recording EMG data
+2025-04-29 14:56:35,511 - INFO - Starting trial 56
+2025-04-29 14:56:36,570 - INFO - Target 6 clicked! Trial 56/80
+2025-04-29 14:56:36,571 - INFO - Stopped recording EMG data
+2025-04-29 14:56:36,571 - INFO - Saved trial 55 with 270 samples
+2025-04-29 14:56:39,125 - INFO - Started recording EMG data
+2025-04-29 14:56:39,125 - INFO - Starting trial 57
+2025-04-29 14:56:40,379 - INFO - Target 1 clicked! Trial 57/80
+2025-04-29 14:56:40,380 - INFO - Stopped recording EMG data
+2025-04-29 14:56:40,380 - INFO - Saved trial 56 with 316 samples
+2025-04-29 14:56:41,791 - INFO - Started recording EMG data
+2025-04-29 14:56:41,792 - INFO - Starting trial 58
+2025-04-29 14:56:42,901 - INFO - Target 7 clicked! Trial 58/80
+2025-04-29 14:56:42,901 - INFO - Stopped recording EMG data
+2025-04-29 14:56:42,901 - INFO - Saved trial 57 with 270 samples
+2025-04-29 14:56:43,692 - INFO - Started recording EMG data
+2025-04-29 14:56:43,692 - INFO - Starting trial 59
+2025-04-29 14:56:44,836 - INFO - Target 0 clicked! Trial 59/80
+2025-04-29 14:56:44,836 - INFO - Stopped recording EMG data
+2025-04-29 14:56:44,836 - INFO - Saved trial 58 with 285 samples
+2025-04-29 14:56:45,722 - INFO - Started recording EMG data
+2025-04-29 14:56:45,723 - INFO - Starting trial 60
+2025-04-29 14:56:47,166 - WARNING - Missed target 0 at trial 60
+2025-04-29 14:56:47,970 - INFO - Target 0 clicked! Trial 60/80
+2025-04-29 14:56:47,970 - INFO - Stopped recording EMG data
+2025-04-29 14:56:47,971 - INFO - Saved trial 59 with 571 samples
+2025-04-29 14:56:50,172 - INFO - Started recording EMG data
+2025-04-29 14:56:50,172 - INFO - Starting trial 61
+2025-04-29 14:56:51,414 - INFO - Target 0 clicked! Trial 61/80
+2025-04-29 14:56:51,415 - INFO - Stopped recording EMG data
+2025-04-29 14:56:51,415 - INFO - Saved trial 60 with 316 samples
+2025-04-29 14:56:52,285 - INFO - Started recording EMG data
+2025-04-29 14:56:52,285 - INFO - Starting trial 62
+2025-04-29 14:56:53,536 - INFO - Target 7 clicked! Trial 62/80
+2025-04-29 14:56:53,536 - INFO - Stopped recording EMG data
+2025-04-29 14:56:53,537 - INFO - Saved trial 61 with 301 samples
+2025-04-29 14:56:54,259 - INFO - Started recording EMG data
+2025-04-29 14:56:54,260 - INFO - Starting trial 63
+2025-04-29 14:56:55,382 - INFO - Target 7 clicked! Trial 63/80
+2025-04-29 14:56:55,382 - INFO - Stopped recording EMG data
+2025-04-29 14:56:55,382 - INFO - Saved trial 62 with 285 samples
+2025-04-29 14:56:57,828 - INFO - Started recording EMG data
+2025-04-29 14:56:57,828 - INFO - Starting trial 64
+2025-04-29 14:56:59,069 - WARNING - Missed target 1 at trial 64
+2025-04-29 14:56:59,486 - INFO - Target 1 clicked! Trial 64/80
+2025-04-29 14:56:59,486 - INFO - Stopped recording EMG data
+2025-04-29 14:56:59,486 - INFO - Saved trial 63 with 421 samples
+2025-04-29 14:57:02,276 - INFO - Started recording EMG data
+2025-04-29 14:57:02,276 - INFO - Starting trial 65
+2025-04-29 14:57:03,482 - INFO - Target 4 clicked! Trial 65/80
+2025-04-29 14:57:03,482 - INFO - Stopped recording EMG data
+2025-04-29 14:57:03,482 - INFO - Saved trial 64 with 301 samples
+2025-04-29 14:57:05,535 - INFO - Started recording EMG data
+2025-04-29 14:57:05,535 - INFO - Starting trial 66
+2025-04-29 14:57:06,600 - INFO - Target 7 clicked! Trial 66/80
+2025-04-29 14:57:06,600 - INFO - Stopped recording EMG data
+2025-04-29 14:57:06,600 - INFO - Saved trial 65 with 257 samples
+2025-04-29 14:57:08,596 - INFO - Started recording EMG data
+2025-04-29 14:57:08,596 - INFO - Starting trial 67
+2025-04-29 14:57:09,884 - WARNING - Missed target 0 at trial 67
+2025-04-29 14:57:10,302 - WARNING - Missed target 0 at trial 67
+2025-04-29 14:57:10,752 - INFO - Target 0 clicked! Trial 67/80
+2025-04-29 14:57:10,752 - INFO - Stopped recording EMG data
+2025-04-29 14:57:10,752 - INFO - Saved trial 66 with 526 samples
+2025-04-29 14:57:11,907 - INFO - Started recording EMG data
+2025-04-29 14:57:11,907 - INFO - Starting trial 68
+2025-04-29 14:57:13,241 - INFO - Target 0 clicked! Trial 68/80
+2025-04-29 14:57:13,242 - INFO - Stopped recording EMG data
+2025-04-29 14:57:13,242 - INFO - Saved trial 67 with 331 samples
+2025-04-29 14:57:15,076 - INFO - Started recording EMG data
+2025-04-29 14:57:15,076 - INFO - Starting trial 69
+2025-04-29 14:57:16,073 - INFO - Target 1 clicked! Trial 69/80
+2025-04-29 14:57:16,074 - INFO - Stopped recording EMG data
+2025-04-29 14:57:16,074 - INFO - Saved trial 68 with 240 samples
+2025-04-29 14:57:18,142 - INFO - Started recording EMG data
+2025-04-29 14:57:18,142 - INFO - Starting trial 70
+2025-04-29 14:57:19,314 - INFO - Target 2 clicked! Trial 70/80
+2025-04-29 14:57:19,314 - INFO - Stopped recording EMG data
+2025-04-29 14:57:19,315 - INFO - Saved trial 69 with 286 samples
+2025-04-29 14:57:20,601 - INFO - Started recording EMG data
+2025-04-29 14:57:20,601 - INFO - Starting trial 71
+2025-04-29 14:57:21,660 - WARNING - Missed target 5 at trial 71
+2025-04-29 14:57:22,625 - INFO - Target 5 clicked! Trial 71/80
+2025-04-29 14:57:22,625 - INFO - Stopped recording EMG data
+2025-04-29 14:57:22,625 - INFO - Saved trial 70 with 496 samples
+2025-04-29 14:57:25,562 - INFO - Started recording EMG data
+2025-04-29 14:57:25,563 - INFO - Starting trial 72
+2025-04-29 14:57:26,784 - INFO - Target 3 clicked! Trial 72/80
+2025-04-29 14:57:26,784 - INFO - Stopped recording EMG data
+2025-04-29 14:57:26,784 - INFO - Saved trial 71 with 315 samples
+2025-04-29 14:57:28,502 - INFO - Started recording EMG data
+2025-04-29 14:57:28,502 - INFO - Starting trial 73
+2025-04-29 14:57:29,964 - INFO - Target 5 clicked! Trial 73/80
+2025-04-29 14:57:29,965 - INFO - Stopped recording EMG data
+2025-04-29 14:57:29,965 - INFO - Saved trial 72 with 376 samples
+2025-04-29 14:57:31,574 - INFO - Started recording EMG data
+2025-04-29 14:57:31,575 - INFO - Starting trial 74
+2025-04-29 14:57:32,874 - INFO - Target 2 clicked! Trial 74/80
+2025-04-29 14:57:32,874 - INFO - Stopped recording EMG data
+2025-04-29 14:57:32,874 - INFO - Saved trial 73 with 315 samples
+2025-04-29 14:57:35,817 - INFO - Started recording EMG data
+2025-04-29 14:57:35,817 - INFO - Starting trial 75
+2025-04-29 14:57:36,978 - INFO - Target 1 clicked! Trial 75/80
+2025-04-29 14:57:36,978 - INFO - Stopped recording EMG data
+2025-04-29 14:57:36,978 - INFO - Saved trial 74 with 301 samples
+2025-04-29 14:57:39,608 - INFO - Started recording EMG data
+2025-04-29 14:57:39,608 - INFO - Starting trial 76
+2025-04-29 14:57:40,490 - INFO - Target 6 clicked! Trial 76/80
+2025-04-29 14:57:40,491 - INFO - Stopped recording EMG data
+2025-04-29 14:57:40,491 - INFO - Saved trial 75 with 210 samples
+2025-04-29 14:57:42,612 - INFO - Started recording EMG data
+2025-04-29 14:57:42,612 - INFO - Starting trial 77
+2025-04-29 14:57:43,909 - INFO - Target 3 clicked! Trial 77/80
+2025-04-29 14:57:43,910 - INFO - Stopped recording EMG data
+2025-04-29 14:57:43,910 - INFO - Saved trial 76 with 316 samples
+2025-04-29 14:57:45,569 - INFO - Started recording EMG data
+2025-04-29 14:57:45,570 - INFO - Starting trial 78
+2025-04-29 14:57:46,776 - INFO - Target 5 clicked! Trial 78/80
+2025-04-29 14:57:46,776 - INFO - Stopped recording EMG data
+2025-04-29 14:57:46,776 - INFO - Saved trial 77 with 301 samples
+2025-04-29 14:57:48,333 - INFO - Started recording EMG data
+2025-04-29 14:57:48,333 - INFO - Starting trial 79
+2025-04-29 14:57:49,311 - WARNING - Missed target 3 at trial 79
+2025-04-29 14:57:49,844 - INFO - Target 3 clicked! Trial 79/80
+2025-04-29 14:57:49,844 - INFO - Stopped recording EMG data
+2025-04-29 14:57:49,844 - INFO - Saved trial 78 with 376 samples
+2025-04-29 14:57:51,053 - INFO - Started recording EMG data
+2025-04-29 14:57:51,053 - INFO - Starting trial 80
+2025-04-29 14:57:52,097 - INFO - Target 4 clicked! Trial 80/80
+2025-04-29 14:57:52,097 - INFO - Stopped recording EMG data
+2025-04-29 14:57:52,098 - INFO - Saved trial 79 with 270 samples
+2025-04-29 14:57:52,163 - INFO - Stopped recording EMG data
+2025-04-29 14:57:52,163 - WARNING - No data collected for trial 80
+2025-04-29 14:57:52,163 - INFO - Preparing to save data...
+2025-04-29 14:57:52,197 - INFO - Data saved successfully to /home/braingeneers/Documents/NeuroTechSCPersonalUse/Data/2025-04-29/neural_data_20250429_1453_block_(0).mat
+2025-04-29 14:57:52,197 - INFO - Session summary:
+2025-04-29 14:57:52,197 - INFO - Total trials completed: 80
+2025-04-29 14:57:52,198 - INFO - Average trial duration: 1266.40 ms
+2025-04-29 14:57:52,198 - INFO - Total session duration: 240.37 seconds
+2025-04-29 14:57:52,735 - INFO - Cleaning up...
+2025-04-29 14:57:52,735 - INFO - Stopped recording EMG data
+2025-04-29 14:57:52,735 - WARNING - No data collected for trial 80
+2025-04-29 14:57:54,236 - INFO - OpenBCI board disconnected
