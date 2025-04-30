@@ -12,9 +12,6 @@ import serial.tools.list_ports
 import atexit
 import logging
 import os
-import re
-import matplotlib.pyplot as plt
-
 
 # OpenBCI setup
 NUM_CHANNELS = 8
@@ -24,51 +21,17 @@ SAMPLE_RATE = 250  # Hz
 try:
     NUM_TRIALS = int(input("Enter number of trials to collect: "))
     PARTICIPANT_ID = input("Enter participant ID: ")
-
-    default_path = "/home/braingeneers/Documents/NeuroTechSCPersonalUse/Data"  # Replace with your actual default path
-    user_input = input(f"Path to Data Directory (press Enter for default: {default_path}): ")
-
-    DATA_DIRECTORY_PATH = user_input if user_input.strip() else default_path
+    BLOCK_ID = input("Enter block ID: ")
 except ValueError:
     print("Please enter a valid number of trials greater than 0")
     exit(1)
 
-# === Step 2: Create subdirectory with today's date ===
-date_str = datetime.now().strftime('%Y-%m-%d')
-DATA_DIRECTORY_PATH = os.path.join(DATA_DIRECTORY_PATH, date_str)
-os.makedirs(DATA_DIRECTORY_PATH, exist_ok=True)
-
-# === Step 3: Determine next available zero-indexed BLOCK_ID ===
-existing_files = os.listdir(DATA_DIRECTORY_PATH)
-block_pattern = re.compile(r'block_\((\d+)\)\.mat', re.IGNORECASE)
-
-# Extract existing block numbers
-existing_block_ids = sorted({
-    int(match.group(1))
-    for filename in existing_files
-    if (match := block_pattern.search(filename))
-})
-
-# Find the first unused zero-indexed BLOCK_ID
-BLOCK_ID = 0
-for existing_id in existing_block_ids:
-    if existing_id == BLOCK_ID:
-        BLOCK_ID += 1
-    else:
-        break
-
-# === Step 4: Create filename with timestamp and BLOCK_ID ===
-timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-fname = f"neural_data_{timestamp}_block_({BLOCK_ID}).mat"
-full_path = os.path.join(DATA_DIRECTORY_PATH, fname)
-
-# === Step 5: Configure logging ===
-log_path = os.path.join(DATA_DIRECTORY_PATH, f"post_block_summary_{BLOCK_ID}.log")
+# Configure logging after BLOCK_ID is defined
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_path),
+        logging.FileHandler(f"post_block_summary_{BLOCK_ID}.log"),
         logging.StreamHandler()
     ]
 )
@@ -119,8 +82,7 @@ metadata = {
     'task': 'radial8',
     'num_trials': NUM_TRIALS,
     'participant_id': PARTICIPANT_ID,
-    'block_id': BLOCK_ID,
-    'intended_save_path': DATA_DIRECTORY_PATH
+    'block_id': BLOCK_ID
 }
 
 logging.info(f"Metadata: {metadata}")
@@ -150,12 +112,12 @@ def stop_recording():
     recording_active = False
     logging.info("Stopped recording EMG data")
     if current_trial_data and trial_count < NUM_TRIALS:  # Check if we have data and space
-        trial_start_time.append(pygame.time.get_ticks() - len(current_trial_data) * (1000/SAMPLE_RATE))
-        trial_end_time.append(pygame.time.get_ticks())
-        trial_duration.append(trial_end_time[trial_count] - trial_start_time[trial_count])
-        trial_neural_data.append(current_trial_data)
-        trial_cursor_trajectory.append(current_cursor_trajectory)
-        trial_cues.append(target_idx)
+        trial_start_time[trial_count] = pygame.time.get_ticks() - len(current_trial_data) * (1000/SAMPLE_RATE)
+        trial_end_time[trial_count] = pygame.time.get_ticks()
+        trial_duration[trial_count] = trial_end_time[trial_count] - trial_start_time[trial_count]
+        trial_neural_data[trial_count] = current_trial_data
+        trial_cursor_trajectory[trial_count] = current_cursor_trajectory
+        trial_cues[trial_count] = target_idx
         logging.info(f"Saved trial {trial_count} with {len(current_trial_data)} samples")
     else:
         logging.warning(f"No data collected for trial {trial_count}")
@@ -202,7 +164,7 @@ def draw_custom_cursor():
     pos = center if lock_cursor else pygame.mouse.get_pos()
     pygame.draw.circle(screen, (0, 0, 0), pos, 5)
     if not lock_cursor:
-        current_cursor_trajectory.append(pos)
+        trial_cursor_trajectory[trial_count].append(pos)
 
 # Colors
 default_color = (70, 130, 180)
@@ -309,7 +271,8 @@ stop_recording()
 # Prepare data for saving
 logging.info("Preparing to save data...")
 
-######################### SAVING DATA ############################
+# Create filename with timestamp and block ID
+fname = f"neural_data_{datetime.now().strftime('%Y%m%d_%H%M')}_block{BLOCK_ID}.mat"
 
 try:
     # Convert data to numpy arrays
@@ -324,64 +287,30 @@ try:
     }
     
     # Save data
-    savemat(full_path, mat_data, oned_as='column')
-    logging.info(f"Data saved successfully to {full_path}")
+    savemat(fname, mat_data, oned_as='column')
+    logging.info(f"Data saved successfully to {fname}")
     logging.info("Session summary:")
     logging.info(f"Total trials completed: {trial_count}")
     logging.info(f"Average trial duration: {np.mean(trial_duration):.2f} ms")
     logging.info(f"Total session duration: {(trial_end_time[-1] - trial_start_time[0])/1000:.2f} seconds")
-
+    
 except Exception as e:
-    logging.error(f"Error saving data to {full_path}: {e}")
-
-
-########################## GENERATING PLOTS ###################################
-
-plot_filename = f"cursor_trajectories_block_{BLOCK_ID}.png"
-
-# Define the center and radius of the radial 8 task
-center_x = 450
-center_y = 350
-radius = 250
-
-# Compute the target locations
-targets_x = []
-targets_y = []
-for i in range(8):
-    angle = np.radians(i * 45)
-    x = center_x + radius * np.cos(angle)
-    y = center_y + radius * np.sin(angle)
-    targets_x.append(x)
-    targets_y.append(y)
-
-try:
-    # Create a single plot
-    plt.figure(figsize=(8, 8))
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.xlim(center_x - radius - 50, center_x + radius + 50)
-    plt.ylim(center_y - radius - 50, center_y + radius + 50)
-    plt.scatter(center_x, center_y, marker='o', color='blue', s=100, label='Center')
-    plt.scatter(targets_x, targets_y, marker='o', color='green', s=50, label='Targets')
-
-    for i, trial_data in enumerate(mat_data['cursor_trajectory']):
-        if isinstance(trial_data, np.ndarray) and trial_data.size > 0:
-            try:
-                x = trial_data[:, 0]
-                y = trial_data[:, 1]
-                plt.plot(x, y, linewidth=0.5, alpha=0.7)
-            except Exception as e:
-                logging.warning(f"Skipping trial {i} due to error: {e}")
-
-
-    plt.title(f"All Cursor Trajectories - Block {fname[-6]}")
-    plt.xlabel("X Position")
-    plt.ylabel("Y Position")
-    plt.axis('off')
-    plt.legend()
-    plt.tight_layout()
-
-    plot_save_path = os.path.join(DATA_DIRECTORY_PATH, plot_filename)
-    plt.savefig(plot_save_path, format='png')
-
-except Exception as e:
-    print(f"An error occurred: {e}")
+    logging.error(f"Error saving data: {e}")
+    # Try saving as a backup format (JSON)
+    try:
+        import json
+        backup_fname = fname.replace('.mat', '.json')
+        backup_data = {
+            'neural_data': [trial.tolist() if isinstance(trial, np.ndarray) else trial for trial in trial_neural_data],
+            'cursor_trajectory': [trial.tolist() if isinstance(trial, np.ndarray) else trial for trial in trial_cursor_trajectory],
+            'duration': trial_duration,
+            'trial_start_times': trial_start_time,
+            'trial_end_times': trial_end_time,
+            'cue': trial_cues,
+            'metadata': metadata
+        }
+        with open(backup_fname, 'w') as f:
+            json.dump(backup_data, f)
+        logging.info(f"Data saved as backup in JSON format to {backup_fname}")
+    except Exception as e2:
+        logging.error(f"Failed to save backup data: {e2}")
